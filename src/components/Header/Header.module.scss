@@ -39,6 +39,7 @@
 }
 
 .authLink {
+  padding-bottom: 4%;
   border: none;
   font-size: 12px;
   text-decoration: none;
@@ -51,7 +52,7 @@
 }
 
 .bookmarkLink {
-  padding-bottom: 4%;
+  padding: 0 0 1% 15%;
   transition: all .3s ease;
 
   &:hover {

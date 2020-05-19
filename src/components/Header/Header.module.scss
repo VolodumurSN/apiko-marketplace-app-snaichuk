@@ -1,0 +1,59 @@
+.header {
+  padding: 16px 0 14px;
+  background: transparent;
+}
+
+.dark {
+  background: linear-gradient(180deg, #090810 0%, #171236 100%);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  max-width: 1174px;
+  padding: 0 10px;
+  margin: 0 auto;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.center {
+  max-width: 855px;
+  width: 100%;
+  display: flex;
+  padding: 8px 0 0;
+  margin: 0 31.5px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.right {
+  padding: 8px 25px 0 0;
+  display: flex;
+  width: 118px;
+  height: 42px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.authLink {
+  border: none;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: inherit;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+}
+
+.bookmarkLink {
+  padding-top: 3%;
+  transition: all .3s ease;
+
+  &:hover {
+    transform:scale(1.08);
+  }
+}

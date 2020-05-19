@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 904px;
+  width: 100%;
+}

@@ -1,0 +1,45 @@
+.title {
+  padding: 0 0 18px;
+  margin: 0;
+  text-align: center;
+  color: #282828;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.formBox {
+  max-width: 425px;
+  width: 100%;
+  padding: 25px 24px 21px;
+  background: #fff;
+  box-shadow: 0px 2px 42px rgba(0, 0, 0, 0.111233);
+  border-radius: 7px;
+}
+
+.linkBox {
+  max-width: 425px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 30px;
+  margin: 21px 0 0;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 42px rgba(0, 0, 0, 0.111233);
+  border-radius: 7px;
+  text-align: center;
+
+  &__text {
+    display: inline-block;
+    margin: 0;
+    color: #2A2A2A;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+
+  &__link {
+    font-size: inherit;
+    color: #349A89;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

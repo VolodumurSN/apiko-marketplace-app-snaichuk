@@ -1,0 +1,27 @@
+.chat {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  background: #FFF;
+  font-family: Rubik, sans-serif;
+  border: 1px solid #E9EBF2;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.0801191);
+  margin: 0 auto;
+}
+
+.aside {
+  max-width: 440px;
+  width: 100%;
+  height: 100vh;
+  border-right: 1px solid #E7E9ED;
+  border-left: 1px solid #E7E9ED;
+}
+
+.chatDetails {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}

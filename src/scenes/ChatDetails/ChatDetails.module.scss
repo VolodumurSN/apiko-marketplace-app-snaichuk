@@ -1,0 +1,75 @@
+.head {
+  position: relative;
+  height: 72px;
+  display: flex;
+  padding-left: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #E7E9ED;
+}
+
+.memberName {
+  margin: 0 52px 0 16px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #131314;
+}
+
+.menuWrap {
+  top: 4px;
+  right: 18px;
+  position: absolute;
+  width: 12px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.menuBtn {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  width: 4px;
+  height: 4px;
+  background: #97A3B4;
+  border-radius: 50%;
+
+  &::before {
+    content: '';
+    display: block;
+    @extend .menuBtn;
+    top: 6px;
+    left: 0;
+  }
+  &::after {
+    content: '';
+    display: block;
+    @extend .menuBtn;
+    top: -6;
+    left: 0;
+  }
+}
+
+.chatWindow {
+  flex: 5;
+  overflow: auto;
+  padding: 25px 0 0;
+  background: #F5F7FB;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  padding: 17px 72px 17px 20px;
+  border: 1px solid #E9EBF2;
+  font-weight: 600;
+  font-size: 13px;
+  outline: none;
+  line-height: 22px;
+  color: #46464e;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}

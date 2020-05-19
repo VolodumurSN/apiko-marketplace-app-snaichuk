@@ -1,0 +1,86 @@
+.uploadBar {
+  display: flex;
+  padding: 16px;
+  margin: 0 0 24px;
+  height: 124px;
+  background: #F9FAFB;
+  border: 1px solid #DEDEE0;
+  border-radius: 5px;
+}
+
+.uploadInput {
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.uploadBtn {
+  position: relative;
+  display: flex;
+  height: 90px;
+  width: 90px;
+  background: #E4E4E4;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:after {
+    z-index: 1;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 38px;
+    border-radius: 4px;
+    background: #349A89;
+    left: 27px;
+    top: 49%;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    @extend .uploadBtn:after;
+    transform: rotate(90deg);
+  }
+}
+
+.photo {
+  display: flex;
+  max-width: 100px;
+  height: auto;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+
+.upgradeBtn {
+  position: relative;
+  top: -22px;
+  left: 0;
+  display: flex;
+  margin: 0 auto;
+  width: 104px;
+  height: 23px;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.4px;
+  color: #349A89;
+  background: #FFF;
+  border: 1px solid #349A89;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upgradeInput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}

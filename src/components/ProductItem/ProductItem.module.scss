@@ -1,0 +1,37 @@
+.productImg {
+  height: 145px;
+  width: 201px;
+  border-radius: 4px 4px 0 0;
+}
+
+.productTitle {
+  line-height: 17px;
+  color: #373738;
+  margin: 4px 12px 9px;
+}
+
+.productPrice {
+  font-size: 18px;
+  line-height: 21px;
+  color: #101010;
+  margin: 0;
+  padding: 0 9px 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.bookmark {
+  z-index: 5;
+  position: absolute;
+  right: 7px;
+  bottom: 46px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #FFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.163407);
+  cursor: pointer;
+}

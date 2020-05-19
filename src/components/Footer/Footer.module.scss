@@ -1,0 +1,33 @@
+.footer {
+  position: relative;
+  background: #c0c4ce20;
+  font-size: 14.5px;
+  line-height: 17px;
+  color: #C0C4CE;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.5px;
+    display: block;
+    width: 57.5%;
+    background: rgba(#979797, .2);
+  }
+}
+
+.content {
+  display: flex;
+  max-width: 260px;
+  padding: 20px 8px 30px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.link {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}

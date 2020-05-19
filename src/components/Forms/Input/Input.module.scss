@@ -1,0 +1,46 @@
+.label {
+  margin: 0 0 4px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #303030;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 58px;
+  padding: 19px 45px 21px 13px;
+  margin: 3px 0 14px;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+  color: #303030;
+  background: #F9FAFB;
+  border: 1px solid #DEDEE0;
+  border-radius: 5px;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  height: 183px;
+  padding: 19px 45px 21px 13px;
+  margin: 3px 0 14px;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+  color: #303030;
+  background: #F9FAFB;
+  border: 1px solid #DEDEE0;
+  border-radius: 5px;
+}
+
+.error {
+  position: relative;
+  top: -10px;
+  margin: 0 0 10px;
+  color: #FF0000;
+}

@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  position: relative;
+  width: 209px;
+  height: 212px;
+  padding: 3px;
+  background: #FFF;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0 4px 14px rgba(121, 121, 121, 0.0527344);
+  border-radius: 4px;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,42 @@
+.product {
+  position: relative;
+  display: flex;
+  max-width: 180px;
+  width: 100%;
+}
+
+.link {
+  padding: 10px 20px;
+  border-radius: 7px;
+  background-color: #F8F8F8;
+}
+
+.img {
+  display: block;
+  max-width: 47px;
+  max-height: 47px;
+  height: auto;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+  justify-content: space-between;
+  max-height: 40px;
+  color: #131314;
+}
+
+.productName {
+}
+
+.price {
+  font-weight: 600;
+}
+
+@media all and (max-width: 750px) {
+  .product {
+    display: none;
+  }
+}
+

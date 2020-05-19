@@ -1,0 +1,32 @@
+.title {
+  padding: 0 0 18px;
+  margin: 0;
+  text-align: center;
+  color: #282828;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.formBox {
+  padding: 3% 12%;
+  width: 100%;
+  max-width: 1136px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 2px 42px rgba(0, 0, 0, 0.111233);
+  border-radius: 7px;
+
+  label {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  button {
+    display: flex;
+    margin: 40px auto 5px;
+    width: 377px;
+    justify-content: center;
+  }
+}

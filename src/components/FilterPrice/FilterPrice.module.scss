@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  max-width: 855px;
+  width: 100%;
+  padding: 12px;
+  margin: 18px 0;
+  background: #FFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.217111);
+  border-radius: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  color: #505050;
+
+  label {
+    margin: 0;
+    padding: 0;
+    max-width: 144px;
+
+    div:last-child {
+      position: absolute;
+      top: 40px;
+      left: 340px;
+    }
+  }
+
+  input {
+    padding: 10px;
+    margin: 0;
+    width: 144px;
+    height: 35px;
+    background: #F9FAFB;
+    border: 1px solid #DEDEE0;
+    border-radius: 5px;
+  }
+}
+
+.line {
+  height: 1px;
+  width: 12px;
+  margin: 0 7px;
+  background: #DEDEE0;
+}

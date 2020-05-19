@@ -1,0 +1,46 @@
+.avatar {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F1C40F;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.x2 {
+  width: 45.6px;
+  min-height: 45.6px;
+  font-size: 18px;
+  cursor: auto;
+}
+
+.x3 {
+  width: 72px;
+  min-height: 72px;
+  font-size: 24px;
+  cursor: auto;
+}
+
+.x4 {
+  margin: 0 auto;
+  width: 102px;
+  height: 102px;
+  font-size: 36px;
+  cursor: auto;
+}
+
+.border {
+  border: 2.7px solid #349A89;
+  border-radius: 50%;
+}

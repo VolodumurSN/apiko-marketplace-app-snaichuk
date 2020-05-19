@@ -1,0 +1,17 @@
+.passBar {
+  position: relative;
+}
+
+.passRememberLink {
+  position: relative;
+  top: -5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #8C8C8C;
+  text-decoration: none;
+  cursor: pointer;
+}
+

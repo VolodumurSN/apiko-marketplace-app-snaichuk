@@ -34,6 +34,7 @@
   width: 118px;
   height: 42px;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .bookmarkLink {
-  padding-top: 3%;
+  padding-bottom: 4%;
   transition: all .3s ease;
 
   &:hover {

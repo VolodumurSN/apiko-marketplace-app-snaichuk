@@ -5,7 +5,7 @@
   },
   "proxies": {
     "/api/": {
-      "origin": "https://apiko-intensive-backend.herokuapp.com/"
+      "origin": "https://marketplace-api-sv.herokuapp.com/"
     }
   }
 }

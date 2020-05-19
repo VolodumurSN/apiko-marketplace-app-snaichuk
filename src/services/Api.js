@@ -5,16 +5,16 @@ import SocketApi from './SocketApi';
 const { storeLocale, getLocale, removeLocale } = LocalStorage;
 
 const urls = {
-  login: 'http://localhost:5000/api/auth/login',
-  register: 'http://localhost:5000/api/auth/register',
-  viewer: 'http://localhost:5000/api/account',
-  latest: 'http://localhost:5000/api/products/latest',
-  products: 'http://localhost:5000/api/products',
-  saved: 'http://localhost:5000/api/products/saved',
-  search: 'http://localhost:5000/api/products/search',
-  images: 'http://localhost:5000/api/upload/images',
-  users: 'http://localhost:5000/api/users',
-  chats: 'http://localhost:5000/api/chats',
+  login: '/api/auth/login',
+  register: '/api/auth/register',
+  viewer: '/api/account',
+  latest: '/api/products/latest',
+  products: '/api/products',
+  saved: '/api/products/saved',
+  search: '/api/products/search',
+  images: '/api/upload/images',
+  users: '/api/users',
+  chats: '/api/chats',
 };
 
 export const Api = {

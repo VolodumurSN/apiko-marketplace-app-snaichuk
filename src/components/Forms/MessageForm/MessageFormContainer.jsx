@@ -8,13 +8,13 @@ import MessageForm from './MessageFormComponent';
 
 const MessageFormContainer = ({ productId, owner, ...props }) => {
   const { push } = useHistory();
-  const { createChat, isLoading, chatId } = props;
+  const { createChat, isLoading } = props;
 
   const handleMessage = async ({ message }) => {
     try {
       await createChat(productId, message);
 
-      if (!isLoading && chatId) {
+      if (!isLoading) {
         push(routes.INBOX);
       }
     } catch (err) {

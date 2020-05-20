@@ -10,13 +10,13 @@ const MessageFormContainer = ({ productId, owner, ...props }) => {
   const { push } = useHistory();
   const { createChat, isLoading, chatId } = props;
 
-  if (!isLoading && chatId) {
-    push(routes.INBOX);
-  }
-
   const handleMessage = async ({ message }) => {
     try {
       await createChat(productId, message);
+
+      if (!isLoading && chatId) {
+        push(routes.INBOX);
+      }
     } catch (err) {
       console.error(err);
     }

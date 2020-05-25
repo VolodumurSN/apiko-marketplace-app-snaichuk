@@ -104,15 +104,21 @@ export default handleActions(
       },
     }),
 
-    [fetchMoreLatestAction.success]: (state, { payload }) => ({
-      ...state,
-      latestItems: state.latestItems.concat(payload),
-      moreLatest: {
-        ...state.moreLatest,
-        isLoading: false,
-        isError: false,
-      },
-    }),
+    [fetchMoreLatestAction.success]: (state, { payload }) => {
+      const noMore =
+        payload.length < 20 || payload[payload.length - 1].id === 1;
+
+      return {
+        ...state,
+        latestItems: state.latestItems.concat(payload),
+        noMore: noMore,
+        moreLatest: {
+          ...state.moreLatest,
+          isLoading: false,
+          isError: false,
+        },
+      }
+    },
 
     [fetchMoreLatestAction.error]: (state) => ({
       ...state,

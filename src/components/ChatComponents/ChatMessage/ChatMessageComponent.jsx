@@ -1,9 +1,11 @@
 import React from 'react';
 import s from './ChatMessage.module.scss';
-import { DateTime } from 'luxon';
+import * as dayjs from 'dayjs';
+import * as relativeTime from 'dayjs/plugin/relativeTime';
 
 const ChatMessage = ({ isSent, text, createdAt }) => {
-  const timeAgo = DateTime.fromISO(createdAt).toRelative();
+  dayjs.extend(relativeTime);
+  const timeAgo = dayjs(dayjs(new Date(createdAt))).fromNow();
 
   if (isSent) {
     return (

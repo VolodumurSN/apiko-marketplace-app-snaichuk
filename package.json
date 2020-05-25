@@ -15,7 +15,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "luxon": "^1.24.1",
     "react-infinite-scroller": "^1.2.4",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",

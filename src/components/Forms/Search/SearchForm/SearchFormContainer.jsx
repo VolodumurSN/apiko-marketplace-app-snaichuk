@@ -5,7 +5,7 @@ import SearchForm from './SearchFormComponent';
 import { LocalStorage } from '../../../../services/LocalStorage';
 
 const SearchFormContainer = (props) => {
-  const { getLocale } = LocalStorage;
+  const { getLocale, storeLocale } = LocalStorage;
 
   const loadSearchProducts = async ({ search, location }) => {
     const { priceFrom, priceTo } = getLocale('price');
@@ -20,6 +20,8 @@ const SearchFormContainer = (props) => {
     } else {
       await props.fetchLatest({ search, location });
     }
+
+    storeLocale('price', '')
   };
 
   const formikProps = {

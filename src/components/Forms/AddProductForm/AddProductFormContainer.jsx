@@ -4,10 +4,10 @@ import { useHistory } from 'react-router-dom';
 import { routes } from '../../../routes/BaseRoutes';
 import { productsOperations } from '../../../modules/products';
 //form
-import { AddFormValidate } from './AddFormValidate';
-import AddForm from './AddFormComponent';
+import { AddProductFormValidate } from './AddProductFormValidate';
+import AddProductForm from './AddProductFormComponent';
 
-const AddFormContainer = (props) => {
+const AddProductFormContainer = (props) => {
   const { push } = useHistory();
   const [isUploadSuccess, setIsUploadSuccess] = useState(false);
 
@@ -48,11 +48,13 @@ const AddFormContainer = (props) => {
       photos: [],
       price: '',
     },
-    validationSchema: AddFormValidate,
+    validationSchema: AddProductFormValidate,
     onSubmit: uploadProduct,
   };
 
-  return <AddForm {...{ formikProps, isUploadSuccess, ...props }} />;
+  return (
+    <AddProductForm {...{ formikProps, isUploadSuccess, ...props }} />
+  );
 };
 
 const mapStateToProps = (state) => {
@@ -68,4 +70,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(AddFormContainer);
+)(AddProductFormContainer);

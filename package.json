@@ -8,7 +8,7 @@
     "formik": "^2.1.4",
     "history": "^4.10.1",
     "http-proxy-middleware": "^1.0.3",
-    "luxon": "^1.24.1",
+    "dayjs": "^1.8.27",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "normalizr": "^3.6.0",

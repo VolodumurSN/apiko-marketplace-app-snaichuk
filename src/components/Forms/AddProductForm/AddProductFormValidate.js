@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-export const AddFormValidate = Yup.object().shape({
+export const AddProductFormValidate = Yup.object().shape({
   title: Yup.string()
     .min(10, 'Title must be longer than 10 characters')
     .required('Required'),

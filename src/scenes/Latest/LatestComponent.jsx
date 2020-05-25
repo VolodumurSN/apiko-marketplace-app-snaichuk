@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 // import s from './Latest.module.scss';
 import ProductList from '../../components/ProductList';
-import FilterPrice from '../../components/FilterPrice';
+import FilterPriceForm from '../../components/Forms/Search/FilterPriceForm';
 import Button from '../../components/Buttons/Button';
 import Spinner from '../../components/Spinners/Spinner';
 
@@ -10,20 +10,19 @@ const Latest = ({
   isLoadingMore,
   fetchMoreLatest,
   products,
+  noMore,
 }) => {
-  const isMore = products[products.length - 1]?.id !== 1;
-
   if (isLoadingLatest) {
     return <Spinner />;
   }
 
   return (
     <>
-      <FilterPrice />
+      <FilterPriceForm />
 
       <ProductList products={products} />
 
-      {isMore && (
+      {!noMore && (
         <Button
           onClick={() => {
             fetchMoreLatest({

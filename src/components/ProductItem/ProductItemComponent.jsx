@@ -1,9 +1,12 @@
 import React from 'react';
 import { checkPhoto } from '../../utils/checkPhoto';
 import s from './ProductItem.module.scss';
-import IconBookmark from '../Icons/IconBookmark';
 import { generatePath, Link } from 'react-router-dom';
 import { routes } from '../../routes/BaseRoutes';
+import ButtonBookmark from '../Buttons/ButtonBookmark';
+import OptimisticHOC from '../HOCs/OptimisticHOC';
+
+const OptimisticBookmarkBtn = OptimisticHOC(ButtonBookmark);
 
 const ProductItem = (props) => {
   const {
@@ -11,8 +14,9 @@ const ProductItem = (props) => {
     photos,
     title,
     price,
-    handleBookmark,
-    isBookmark,
+    saved,
+    saveProduct,
+    unSaveProduct,
   } = props;
 
   return (
@@ -27,13 +31,13 @@ const ProductItem = (props) => {
         <p className={s.productPrice}>${price}</p>
       </Link>
 
-      <div onClick={handleBookmark} className={s.bookmark}>
-        {isBookmark ? (
-          <IconBookmark fill="#349A89" painted />
-        ) : (
-          <IconBookmark fill="#B7B7B7" />
-        )}
-      </div>
+      <OptimisticBookmarkBtn
+        tiny
+        id={id}
+        isActive={saved}
+        activate={saveProduct}
+        deactivate={unSaveProduct}
+      />
     </>
   );
 };

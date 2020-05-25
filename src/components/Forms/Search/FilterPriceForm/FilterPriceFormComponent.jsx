@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
-import s from './FilterPrice.module.scss';
-import Input from '../Forms/Input';
+import s from './FilterPriceForm.module.scss';
+import Input from '../../Input';
 
 const FilterPrice = ({ formikProps }) => {
   return (

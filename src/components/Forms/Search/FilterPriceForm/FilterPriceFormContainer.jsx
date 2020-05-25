@@ -1,16 +1,15 @@
 import React from 'react';
-import FilterPrice from './FilterPriceComponent';
+import FilterPrice from './FilterPriceFormComponent';
+import { LocalStorage } from '../../../../services/LocalStorage';
 import * as Yup from 'yup';
-import { productsOperations } from '../../modules/products';
+import { productsOperations } from '../../../../modules/products';
 import { connect } from 'react-redux';
 
-const FilterPriceContainer = (props) => {
-  const loadProductsByPrice = async (queries) => {
-    try {
-      await props.fetchLatest(queries);
-    } catch (err) {
-      console.error(err);
-    }
+const FilterPriceContainer = () => {
+  const { storeLocale } = LocalStorage;
+
+  const loadProductsByPrice = (price) => {
+    storeLocale('price', price);
   };
 
   const formikProps = {

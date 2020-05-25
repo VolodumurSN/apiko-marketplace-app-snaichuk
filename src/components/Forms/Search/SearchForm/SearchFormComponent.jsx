@@ -1,8 +1,8 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import Button from '../../Buttons/Button';
+import Button from '../../../Buttons/Button';
 import s from './SearchForm.module.scss';
-import Input from '../Input';
+import Input from '../../Input';
 
 const SearchForm = ({ isLoading, formikProps }) => {
   return (

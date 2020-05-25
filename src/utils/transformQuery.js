@@ -8,9 +8,9 @@ export const transformQuery = ({
 }) => {
   if (priceFrom || priceTo) {
     return `?${queryString.stringify({
-      keywords: 'test',
+      keywords: search,
       priceFrom: priceFrom || 0,
-      priceTo: priceTo || 9999,
+      priceTo: priceTo || 999999,
     })}`;
   }
 

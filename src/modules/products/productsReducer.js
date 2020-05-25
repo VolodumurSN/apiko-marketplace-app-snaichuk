@@ -14,6 +14,8 @@ import {
 const INITIAL_STATE = {
   latestItems: [],
 
+  noMore: false,
+
   latest: {
     isLoading: false,
     isError: false,
@@ -68,15 +70,21 @@ export default handleActions(
       },
     }),
 
-    [fetchLatestAction.success]: (state, { payload }) => ({
-      ...state,
-      latestItems: payload,
-      latest: {
-        ...state.latest,
-        isLoading: false,
-        isError: false,
-      },
-    }),
+    [fetchLatestAction.success]: (state, { payload }) => {
+      const noMore =
+        payload.length < 20 || payload[payload.length - 1].id === 1;
+
+      return {
+        ...state,
+        latestItems: payload,
+        noMore: noMore,
+        latest: {
+          ...state.latest,
+          isLoading: false,
+          isError: false,
+        },
+      };
+    },
 
     [fetchLatestAction.error]: (state) => ({
       ...state,

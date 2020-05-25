@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './ChatItem.module.scss';
 import { useLocation } from 'react-router-dom';
-import { DateTime } from 'luxon';
+import * as dayjs from 'dayjs';
+import * as relativeTime from 'dayjs/plugin/relativeTime';
 import { routes } from '../../../routes/BaseRoutes';
 import { generatePath, Link } from 'react-router-dom';
 import ChatProduct from '../ChatProduct';
@@ -21,10 +22,10 @@ const ChatItem = ({
     classItem += ` ${s.active}`;
   }
 
-  const date = DateTime.fromISO(
-    lastMessage?.createdAt || message.createdAt,
-  );
-  const hours = date.toLocaleString(DateTime.TIME_SIMPLE);
+  dayjs.extend(relativeTime);
+  const timeAgo = dayjs(
+    dayjs(new Date(lastMessage?.createdAt || message.createdAt)),
+  ).fromNow();
 
   return (
     <Link
@@ -40,7 +41,7 @@ const ChatItem = ({
 
       <ChatProduct {...product} />
 
-      <div className={s.time}>{hours}</div>
+      <div className={s.time}>{timeAgo}</div>
     </Link>
   );
 };

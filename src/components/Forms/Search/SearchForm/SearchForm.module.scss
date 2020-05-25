@@ -1,0 +1,46 @@
+.container {
+  max-width: 855px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 35px 0 0 0;
+  justify-content: space-between;
+
+  label {
+    margin: 0;
+    width: 100%;
+  }
+
+  input {
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    padding: 10px 10px 10px 38px;
+  }
+
+  button {
+    margin: 0;
+    width: 176px;
+    height: 50px;
+  }
+}
+
+.icon {
+  position: absolute;
+  padding: 15px 12px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.searchBar {
+  flex: 1;
+  max-width: 467px;
+  min-width: 200px;
+
+}
+
+.locationBar {
+  max-width: 200px;
+}

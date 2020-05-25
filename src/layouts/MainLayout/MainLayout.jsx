@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import ButtonSell from '../../components/Buttons/ButtonSell';
 import IconInbox from '../../components/InboxNavLink';
 import s from './MainLayout.module.scss';
-import SearchForm from '../../components/Forms/Search/SearchForm';
+import Search from '../../components/Forms/SearchForm';
 
 const MainLayout = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
       <Header>
         <IconInbox />
         <ButtonSell />
-        <SearchForm />
+        <Search />
       </Header>
 
       <div className={s.container}>{children}</div>

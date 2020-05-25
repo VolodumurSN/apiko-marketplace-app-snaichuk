@@ -3,7 +3,7 @@ import socket from 'socket.io-client';
 class SocketApi {
   init(token) {
     this.socket = socket(
-      'https://apiko-intensive-backend.herokuapp.com/',
+      'https://marketplace-api-sv.herokuapp.com/',
       {
         query: {
           token,

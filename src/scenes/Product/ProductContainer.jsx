@@ -4,14 +4,33 @@ import { connect } from 'react-redux';
 import { productsOperations } from '../../modules/products';
 import Product from './ProductComponent';
 
-const ProductContainer = (props) => {
+const ProductContainer = ({
+  productDetails,
+  saveProduct,
+  unSaveProduct,
+  ...props
+}) => {
   const { id } = useParams();
+  const [isBookmark, setIsBookmark] = useState(productDetails.saved);
+
+  const handleBookmark = () => {
+    setIsBookmark(!isBookmark);
+
+    isBookmark ? unSaveProduct(id) : saveProduct(id);
+  };
 
   useEffect(() => {
     props.fetchProduct(id);
   }, [id]);
 
-  return <Product {...props} />;
+  return (
+    <Product
+      {...props}
+      productDetails={productDetails}
+      isBookmark={isBookmark}
+      handleBookmark={handleBookmark}
+    />
+  );
 };
 
 const mapStateToProps = (state) => {

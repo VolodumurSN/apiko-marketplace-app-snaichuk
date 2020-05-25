@@ -102,6 +102,15 @@
   position: relative;
   max-width: 259px;
   width: 100%;
+
+  button {
+    font-size: 14px;
+
+    span {
+      color: #000;
+      padding-left: 10px;
+    }
+  }
 }
 
 .seller {

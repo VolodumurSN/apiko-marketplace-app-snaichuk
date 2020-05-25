@@ -13,7 +13,6 @@ const LatestContainer = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    noMore: state.products.noMore,
     products: state.products.latestItems,
     isLoadingLatest: state.products.latest.isLoading,
     isLoadingMore: state.products.moreLatest.isLoading,

@@ -1,15 +1,11 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-// import s from './AddProductForm.module.scss';
+// import s from './AddForm.module.scss';
 import Input from '../Input';
 import Button from '../../Buttons/Button';
 import PhotosBar from '../PhotosBar';
 
-const AddProductForm = ({
-  formikProps,
-  isLoading,
-  isUploadSuccess,
-}) => {
+const AddForm = ({ formikProps, isLoading, isUploadSuccess }) => {
   return (
     <Formik {...formikProps}>
       {({ values }) => (
@@ -56,4 +52,4 @@ const AddProductForm = ({
   );
 };
 
-export default AddProductForm;
+export default AddForm;

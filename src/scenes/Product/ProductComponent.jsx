@@ -1,25 +1,21 @@
 import React, { Fragment } from 'react';
+import { DateTime } from 'luxon';
 import { checkPhoto } from '../../utils/checkPhoto';
 import { useModalWithData } from '../../utils/useModal';
 import s from './Product.module.scss';
 import ProfileAvatar from '../../components/ProfileAvatar';
+import IconBookmark from '../../components/Icons/IconBookmark';
 import Button from '../../components/Buttons/Button';
 import Modal from '../../components/Modals/Modal';
 import MessageModal from '../../components/Modals/MessageModal';
 import MessageForm from '../../components/Forms/MessageForm';
 import Spinner from '../../components/Spinners/Spinner';
-import * as dayjs from 'dayjs';
-import * as calendar from 'dayjs/plugin/calendar';
-import OptimisticHOC from '../../components/HOCs/OptimisticHOC';
-import ButtonBookmark from '../../components/Buttons/ButtonBookmark';
-
-const OptimisticBookmarkBtn = OptimisticHOC(ButtonBookmark);
 
 const Product = ({
   productDetails,
   isProductLoading,
-  saveProduct,
-  unSaveProduct,
+  isBookmark,
+  handleBookmark,
 }) => {
   const {
     isModalOpen,
@@ -28,10 +24,11 @@ const Product = ({
     modalData,
   } = useModalWithData();
 
-  const { id, createdAt, title, owner, saved } = productDetails;
+  const { id, createdAt, title, owner } = productDetails;
 
-  dayjs.extend(calendar);
-  const date = dayjs(dayjs(new Date(createdAt))).calendar(dayjs());
+  const date = DateTime.fromISO(createdAt);
+  const days = date.toRelativeCalendar();
+  const hours = date.toLocaleString(DateTime.TIME_SIMPLE);
 
   if (isProductLoading || !owner) {
     return <Spinner />;
@@ -39,16 +36,14 @@ const Product = ({
 
   return (
     <div className={s.container}>
-      <ProductContainer {...{ ...productDetails, date }} />
+      <ProductContainer {...{ ...productDetails, days, hours }} />
 
       <SellerContainer
         {...{
           owner,
-          id,
           title,
-          saved,
-          saveProduct,
-          unSaveProduct,
+          isBookmark,
+          handleBookmark,
           setModalState,
           setModalData,
         }}
@@ -72,7 +67,8 @@ const ProductContainer = ({
   photos,
   location,
   price,
-  date,
+  days,
+  hours,
 }) => {
   return (
     <Fragment>
@@ -88,7 +84,7 @@ const ProductContainer = ({
 
         <div className={s.titleWrap}>
           <h3 className={s.title}>{title}</h3>
-          <span className={s.date}>{date}</span>
+          <span className={s.date}>{`${days} ${hours}`}</span>
         </div>
 
         <div className={s.location}>
@@ -108,11 +104,9 @@ const ProductContainer = ({
 
 const SellerContainer = ({
   owner,
-  id,
   title,
-  saved,
-  saveProduct,
-  unSaveProduct,
+  isBookmark,
+  handleBookmark,
   setModalState,
   setModalData,
 }) => {
@@ -137,13 +131,24 @@ const SellerContainer = ({
           CHAT WITH SELLER
         </Button>
 
-        <OptimisticBookmarkBtn
-          withText
-          id={id}
-          isActive={saved}
-          activate={saveProduct}
-          deactivate={unSaveProduct}
-        />
+        <Button
+          onClick={handleBookmark}
+          color="#fff"
+          border="1px solid #349A89"
+          type="button"
+        >
+          {isBookmark ? (
+            <>
+              <IconBookmark fill="#349A89" painted />
+              <span>SAVED</span>
+            </>
+          ) : (
+            <>
+              <IconBookmark fill="#349A89" />
+              <span>ADD TO FAVORITE</span>
+            </>
+          )}
+        </Button>
       </div>
     </Fragment>
   );

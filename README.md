@@ -3,6 +3,7 @@ Deployed App on Heroku - [apiko-marketplace-app-snaichuk.herokuapp.com](https://
 
 Deployed API on Heroku - [marketplace-api-sv.herokuapp.com](https://marketplace-api-sv.herokuapp.com/documentation/index.html)
 
+![](https://media.giphy.com/media/f4It0UlYBPVSHxaFJM/giphy.gif)
 
 ## Task list
 - Finish App

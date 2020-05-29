@@ -1,4 +1,8 @@
 # 8th React Intensive. Apiko Marketplace
+Deployed App on Heroku - [apiko-marketplace-app-snaichuk.herokuapp.com](https://apiko-marketplace-app-snaichuk.herokuapp.com/)
+
+Deployed API on Heroku - [marketplace-api-sv.herokuapp.com](https://marketplace-api-sv.herokuapp.com/documentation/index.html)
+
 
 ## Task list
 - Finish App

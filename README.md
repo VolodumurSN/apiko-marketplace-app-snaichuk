@@ -1,4 +1,4 @@
-# 8th React Intensive. Apiko Marketplace
+# [8th React Intensive. Apiko Marketplace](https://dou.ua/calendar/31364/)
 Deployed App on Heroku - [apiko-marketplace-app-snaichuk.herokuapp.com](https://apiko-marketplace-app-snaichuk.herokuapp.com/)
 
 Deployed API on Heroku - [marketplace-api-sv.herokuapp.com](https://marketplace-api-sv.herokuapp.com/documentation/index.html)
